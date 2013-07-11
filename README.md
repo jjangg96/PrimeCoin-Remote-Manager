@@ -35,5 +35,8 @@ PrimeCoin-Remote-Manager
 4. if you need help **"connector.sh -help"**
 
 ##Connector Example 
-**./connector.sh -name node1 -sleep 10 -server http://localhost:3000 -path /home/primecoind**
+    ./connector.sh -name node1 -sleep 10 -server http://localhost:3000 -path /home/primecoind
 
+##Bianry(Jar)
+Connector binary [Download] [1]
+[1]: https://dl.dropboxusercontent.com/u/5736215/PrimeCoinRemoteManager-0.0.1-SNAPSHOT-jar-with-dependencies.jar "Download"
