@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>PrimeCoin Connection Remote Manager</title>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var socket;
+    $(document).ready(function() {
+	socket = io.connect('<%= server %>');
+	socket.on('result', function(data) {
+	    var id = data.id;
+	    var result = data.result;
+		var content = '<p>' + id + '</p><pre>' + result + '</pre>';
+	    if ($('#' + id).length) {
+		//replace
+		$('#' + id).html(content);
+	    } else {
+		//append
+		$('#result').append('<div id="' + id + '">' + content + '</div>');
+	    }
+	});
+
+	$('#commandText').keyup(function() {
+	    //save command with random id
+	    socket.emit('sendCommand', $('#commandText').val().trim() + '_' + Math.floor(Math.random() * 10000) + 1);
+	});
+    });
+</script>
+</head>
+<body>
+	<form>
+		Command : <input type="text" id="commandText" value="" />
+	</form>
+	<div id="result"></div>
+</body>
+</html>

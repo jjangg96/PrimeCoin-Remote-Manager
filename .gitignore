@@ -4,3 +4,5 @@
 *.jar
 *.war
 *.ear
+server/node_modules
+target/
