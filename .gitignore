@@ -1,8 +1,14 @@
+# OSX #
+.DS_Store
+
+# Class #
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Dir #
 server/node_modules
 target/
