@@ -1,5 +1,8 @@
 PrimeCoin-Remote-Manager
 ========================
+![ScreenShot]
+(https://dl.dropboxusercontent.com/u/5736215/primecoin-remote-manager-sc.png).
+
 
 #App Server(Node.js)
 ##Install
@@ -33,3 +36,4 @@ PrimeCoin-Remote-Manager
 
 ##Connector Example 
 **./connector.sh -name node1 -sleep 10 -server http://localhost:3000 -path /home/primecoind**
+
